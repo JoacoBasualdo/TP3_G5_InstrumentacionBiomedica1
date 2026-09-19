@@ -1,1 +1,13 @@
 \babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción y objetivos}{3}{section.1}%
+\contentsline {section}{\numberline {2}Marco Teórico}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Amplificador de instrumentación: AD620}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}TL082}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Norma IEC 60601-2-25}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Triángulo de Einthoven}{5}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Práctica}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Laboratorio}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Simulacion}{11}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Resultados}{11}{section.4}%
+\contentsline {section}{\numberline {5}Conclusiones}{11}{section.5}%
+\contentsline {section}{\numberline {6}Bibliografía}{11}{section.6}%

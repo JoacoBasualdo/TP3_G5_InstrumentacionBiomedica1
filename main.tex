@@ -5,8 +5,8 @@
 % =============================================================================
 \newcommand{\materia}{Instrumentación Biomédica I}
 \newcommand{\institucion}{Instituto Tecnológico de Buenos Aires}
-\newcommand{\numeroTP}{2}
-\newcommand{\nombreTP}{Título}
+\newcommand{\numeroTP}{3}
+\newcommand{\nombreTP}{EEG de un canal}
 \newcommand{\anioTP}{2026}
 
 % =============================================================================
@@ -135,5 +135,132 @@ Firma y Fecha & \\ \hline
 % El cuerpo principal debe ocupar entre 2 y 4 carillas, sin contar carátula,
 % índice, anexo ni bibliografía.
 % =============================================================================
+
+
+
+
+% =============================================================
+\section{Introducción y objetivos}
+El electrocardiograma es un estudio no invasivo que registra la actividad eléctrica del corazón en cada latido, ya que, cada vez que el músculo cardíaco se contrae y se relaja para bombear sangre, genera pequeñas corrientes eléctricas que viajan por el cuerpo y pueden medirse colocando electrodos sobre la piel. En un trazado normal se identifican tres componentes principales: la onda P, que refleja la activación eléctrica o despolarización de las aurículas; el complejo QRS, que muestra la activación de los ventrículos y constituye el pico más alto y rápido del registro; y la onda T, que representa la recuperación eléctrica o repolarización ventricular antes de que comience el siguiente ciclo cardíaco. Los equipos biomédicos utilizados para realizar un ECG requieren de un gran procesamiento de la señal para que el resultado sea fehaciente dado que, a partir de estos resultados, se pueden realizar diagnósticos y tomar decisiones sumamente sensibles en un órgano vital para la vida humana.
+
+\vspace{0.3cm}
+
+En está práctica se realizó un circuito en una protoboard para visualizar en un osciloscopio las mediciones de un ECG, observando como modifican a la señal distintos cambios realizados con el fin de mejorar lo observado.
+
+\vspace{0.3cm}
+
+Los objeticos de esta práctica de laboratorio son:
+\begin{itemize}
+    \item Familizarizarse con el formato y funcionamiento de los amplificadores de instrumentación, que se encuentran presentes en un gran número de equipos biomédicos.
+    \item Medir la ganancia en modo diferencial y en modo común para calcular el CMRR realizando una comparación con la hoja de datos y las simulaciones en la plataforma LTSpice
+    \item Implementación en una protoboard un canal básico de ECG, analizando y observando cómo mejorar la señal.
+\end{itemize}
+
+
+
+
+
+% ================================================================
+\section{Marco Teórico}
+
+\subsection{Amplificador de instrumentación: AD620}
+
+
+El AD620 es un amplificador de instrumentación utilizado en etapas de entrada para instrumentación biomédica. Su arquitectura interna está intergrada por varios amplificadores operaciones y resistencias de precisión que le proporcionan al circuito exactitud y precisión, que son vitales para esta clase de aparatos. 
+Entre sus características técnicas más destacadas se encuentra la posibilidad de determinar su ganancia diferencial ($G$) utilizando una única resistencia externa ($R_G$) conectada entre los pines 1 y 8, gobernada por la relación $G = (49,4\text{ k}\Omega / R_G) + 1$. Asimismo, ofrece un factor de rechazo en modo común (CMRR) elevado, lo que permite extraer biopotenciales débiles inmersos en ruido. 
+Esta cualidad se complementa con una impedancia de entrada extremadamente alta, que reduce al mínimo el efecto de carga frente a las impedancias de contacto de los electrodos, una reducida tensión de offset, corrientes de polarización de entrada bajas, y una alimentación flexible.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figura_AD620.png}
+    \caption{Diagrama de conexiones del amplificador AD620}
+    \label{fig:curva_operativa}
+\end{figure}
+
+
+
+\subsection{TL082}
+
+
+
+El TL082 es un circuito integrado que contiene dos amplificadores operacionales con transistores de efecto de campo (JFET) en su etapa de entrada ampliamente utilizado para filtrado activo y ganancia secundaria. Se destaca por presentar una impedancia de entrada sumamente alta combinada con corrientes de polarización de entrada bajas, lo que minimiza la carga sobre las etapas previas. Es una opción robusta, económica y versátil para implementar filtros
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figura_TL082.png}
+    \caption{Diagrama de conexiones del amplificador operacional TL082}
+    \label{fig:curva_operativa}
+\end{figure}
+
+
+\subsection{Norma IEC 60601-2-25}
+
+Si bien el objetivo del trabajo práctico es implementar un canal básico de ECG en un protoboard, se debe tener en cuenta algunos factores de la norma IEC 60601-2-25 que regula y restringe la funcionalidad de los ECG.
+Entonces, la norma internacional IEC 60601-2-25 establece los requisitos particulares para la seguridad básica y el funcionamiento esencial de los electrocardiógrafos destinados a diagnóstico clínico. A diferencia de los estándares generales, este documento define los criterios técnicos que garantizan que el trazado obtenido reproduzca fielmente la actividad eléctrica del corazón sin introducir distorsiones que puedan derivar en diagnósticos médicos erróneos. Entre sus lineamientos principales para el diseño del circuito se destacan: una respuesta en frecuencia estandarizada ,entre 0,05 Hz y 150 Hz, para preservar tanto las variaciones lentas del segmento ST como la pendiente rápida del complejo QRS; un elevado rechazo en modo común (CMRR) para eliminar la interferencia de la red eléctrica; la clasificación de las conexiones del paciente como partes aplicadas tipo CF, exigiendo corrientes de fuga mínimas y mecanismos de protección frente a descargas de desfibriladores externos.
+
+\subsection{Triángulo de Einthoven}
+
+El Triángulo de Einthoven es un modelo geométrico que explica cómo se registra la 
+actividad eléctrica del corazón en el plano frontal del cuerpo humano. Plantea un triángulo imaginario alrededor del corazón cuyos tres vértices corresponden al brazo derecho, al brazo izquierdo y a la pierna izquierda, puntos donde se colocan las pinzas de las extremidades. 
+Al medir la diferencia de potencial eléctrico entre estos pares de electrodos se obtienen las derivaciones bipolares clásicas: la Derivación I mide entre el brazo izquierdo y el derecho, la Derivación II entre la pierna izquierda y el brazo derecho, y la Derivación III entre la pierna izquierda y el brazo izquierdo. 
+. Por su parte, la cuarta pinza, ubicada en la pierna derecha, no forma parte del triángulo y se utiliza únicamente como referencia o masa para cancelar el ruido eléctrico del entorno.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{pinzas.png}
+    \caption{Conexión de las pinzas}
+    \label{fig:curva_operativa}
+\end{figure}
+% ================================================================
+\section{Práctica}
+
+\subsection{Laboratorio}
+En esta práctica se busca realizar el conexionado del siguiente circuito en una protoboard. En nuestro caso la obtención de la señal se dio a partir de las pinzas de ECG que son los transductores reutilizables encargados de captar la señal eléctrica en las muñecas y tobillos del paciente para registrar las derivaciones del plano frontal.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{circuito.png}
+    \caption{Diagrama del circuito a estudiar}
+    \label{fig:curva_operativa}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{esquema.png}
+    \caption{Esquema del circuito a estudiar}
+    \label{fig:curva_operativa}
+\end{figure}
+
+
+
+
+
+
+\subsection{Simulacion}
+
+
+
+% ================================================================
+\section{Resultados}
+
+
+
+
+% =================================================================
+\section{Conclusiones}
+
+
+
+
+
+% =================================================================
+\section{Bibliografía}
+
+Hojas de datos.
+% chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://webstore.iec.ch/en/iec_catalog/product/preview/?id=L3B1Yi9wZGYvcHJldmlldy9pbmZvX2llYzYwNjAxLTItMjV7ZWQyLjB9Yi5wZGY= (norma)
+
+
+
 
 \end{document}
