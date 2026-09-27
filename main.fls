@@ -1,8 +1,8 @@
-PWD c:/Users/facun/OneDrive/Documentos/GitHub/TP3_G5_InstrumentacionBiomedica1
+PWD c:/Users/afrat/OneDrive/Escritorio/PrimerosPasos/NumpyDesdeCero/TP3_G5_InstrumentacionBiomedica1
 INPUT c:/texlive/2026/texmf.cnf
 INPUT c:/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/facun/OneDrive/Documentos/GitHub/TP3_G5_InstrumentacionBiomedica1/main.tex
+INPUT c:/Users/afrat/OneDrive/Escritorio/PrimerosPasos/NumpyDesdeCero/TP3_G5_InstrumentacionBiomedica1/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls

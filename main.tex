@@ -296,6 +296,14 @@ La señal modificada presenta una mayor amplitud y permite distinguir mejor las 
 % =============================================================================
 \section{Conclusiones}
 
+
+El canal implementado se apoya en tres mecanismos de jerarquía distinta. El rechazo de modo común del AD620 es la condición necesaria, ya que sin él la interferencia de red enmascara biopotenciales de milivoltios; el acoplamiento capacitivo de la etapa inversora y la referencia de media alimentación generada con el TL082 resuelven restricciones de implementación (el offset de la interfase electrodo-electrolito y el uso de fuente simple), pero no contribuyen al rechazo de ruido.
+
+El criterio de diseño dominante resultó ser la ganancia diferencial: como la ganancia de modo común no se modifica al ajustar $R_G$, aumentarla mejora directamente la relación señal-ruido, y ese es el factor que explica la mayor parte de la mejora observada entre ambas configuraciones. El AD620 no limita la banda, ya que su ancho de banda supera en órdenes de magnitud al de interés. El corte superior, en cambio, aporta poco: por tratarse de un filtro de primer orden, bajar $f_H$ incrementa la atenuación a 50\,Hz en menos de 1\,dB, a costa de atenuar el QRS. La recuperación de las ondas P y T se explica por el corrimiento del corte inferior, y la inversión de la señal responde a la topología de la etapa de acondicionamiento, no a un error de medición.
+
+El diseño queda así validado en su principio de funcionamiento, pero con un alcance acotado por el compromiso entre rechazo de red y fidelidad del QRS que impone un filtrado de primer orden: la banda obtenida no satisface los 0,05\,Hz a 150\,Hz que exige la IEC 60601-2-25, por lo que el circuito es válido como canal de monitoreo y ejercicio didáctico, pero no como electrocardiógrafo de diagnóstico. Levantar esa restricción requiere filtros de mayor orden junto con un notch a 50\,Hz, que permiten extender el corte superior a 150\,Hz sin degradar el rechazo de red.
+
+Quedan como trabajo pendiente la medición del CMRR mediante señales diferencial y de modo común conocidas, para contrastarlo con la hoja de datos y la simulación, y la incorporación de un circuito de pierna derecha que atenúe activamente el modo común en lugar de solo rechazarlo. Si el prototipo se aplicara sobre un paciente, se sumarían la aislación galvánica y la protección ante desfibrilación exigidas para partes aplicadas tipo CF, aspectos no evaluados en este trabajo.
 % =============================================================================
 \section{Bibliografía}
 

@@ -18,4 +18,4 @@
 \contentsline {subsection}{\numberline {4.1}Resultado de la configuración original}{11}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Resultado con las modificaciones}{11}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Conclusiones}{11}{section.5}%
-\contentsline {section}{\numberline {6}Bibliografía}{11}{section.6}%
+\contentsline {section}{\numberline {6}Bibliografía}{12}{section.6}%
