@@ -5,9 +5,17 @@
 \contentsline {subsection}{\numberline {2.2}TL082}{4}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Norma IEC 60601-2-25}{5}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Triángulo de Einthoven}{5}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Práctica}{8}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Laboratorio}{8}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Simulacion}{11}{subsection.3.2}%
+\contentsline {section}{\numberline {3}Práctica}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Laboratorio}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Simulación}{8}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Circuito original y señales de entrada}{8}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Función de las etapas y configuración original}{9}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Modificaciones y justificación}{10}{subsubsection.3.2.3}%
+\contentsline {paragraph}{Alimentación.}{10}{section*.8}%
+\contentsline {paragraph}{Ganancia.}{10}{section*.9}%
+\contentsline {paragraph}{Filtrado.}{10}{section*.10}%
 \contentsline {section}{\numberline {4}Resultados}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Resultado de la configuración original}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Resultado con las modificaciones}{11}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Conclusiones}{11}{section.5}%
 \contentsline {section}{\numberline {6}Bibliografía}{11}{section.6}%

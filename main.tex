@@ -1,16 +1,16 @@
 \documentclass[10pt]{article}
 
 % =============================================================================
-% DATOS GENERALES DEL TRABAJO
+% DATOS GENERALES
 % =============================================================================
 \newcommand{\materia}{Instrumentación Biomédica I}
 \newcommand{\institucion}{Instituto Tecnológico de Buenos Aires}
 \newcommand{\numeroTP}{3}
-\newcommand{\nombreTP}{EEG de un canal}
+\newcommand{\nombreTP}{ECG de un canal}
 \newcommand{\anioTP}{2026}
 
 % =============================================================================
-% FORMATO EXIGIDO POR LA CÁTEDRA
+% FORMATO
 % =============================================================================
 \textheight=21cm
 \textwidth=15cm
@@ -22,33 +22,26 @@
 % =============================================================================
 % PAQUETES
 % =============================================================================
-
-% Codificación e idioma
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[spanish,es-tabla]{babel}
 
-% Matemática y unidades
 \usepackage{amsmath,amssymb}
 \usepackage{siunitx}
 \sisetup{output-decimal-marker={,}}
 
-% Figuras y tablas
 \usepackage{graphicx}
-\graphicspath{{imagenes/}}
+\graphicspath{{Imagenes/}{imagenes/}}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
+
 \usepackage{float}
 \usepackage{subcaption}
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{adjustbox}
-
-% Formato de página
 \usepackage{fancyhdr}
 \usepackage{multicol}
 \usepackage{xcolor}
-
-% Enlaces y referencias
 \usepackage[hidelinks]{hyperref}
 
 % =============================================================================
@@ -69,54 +62,46 @@
 % CARÁTULA
 % =============================================================================
 \begin{center}
+    \textsc{\LARGE \materia}\\[0.2cm]
+    \textsc{\Large \institucion}\\[0.2cm]
+    \HRule\\[0.2cm]
+    {\huge\bfseries TP \numeroTP{} - \nombreTP}\\[0.2cm]
+    \HRule\\[1cm]
 
-\textsc{\LARGE \materia}\\[0.2cm]
-\textsc{\Large \institucion}\\[0.2cm]
+    \begin{multicols}{2}
+        \begin{flushleft}
+            \large
+            \textbf{Profesores:}\\
+            Hernán \textsc{Soares}\\
+            Sofía \textsc{Cerretini}
+        \end{flushleft}
 
-\HRule \\[0.2cm]
-{\huge\bfseries TP \numeroTP{} - \nombreTP \\[0.2cm]}
-\HRule \\[1cm]
+        \columnbreak
 
-\begin{multicols}{2}
+        \begin{flushleft}
+            \large
+            \textbf{Alumnos/as:}\\
+            Joaquín \textsc{Basualdo} -- 65658\\
+            Bautista \textsc{Estrada} -- 65583\\
+            Facundo \textsc{Garaguso Fernandez} -- 65436\\
+            Augusto \textsc{Frate} -- 65013
+        \end{flushleft}
+    \end{multicols}
 
-% Profesores
-\begin{flushleft}
-    \large
-    \textbf{Profesores:}\\
-    Hernán \textsc{Soares}\\
-    Sofía \textsc{Cerretini}
-\end{flushleft}
+    \vspace{0.5cm}
+    \renewcommand{\arraystretch}{1.6}
 
-\columnbreak
-
-% Integrantes
-\begin{flushleft}
-    \large
-    \textbf{Alumnos/as:}\\
-    Joaquín \textsc{Basualdo} -- 65658\\
-    Bautista \textsc{Estrada} -- 65583\\
-    Facundo \textsc{Garaguso Fernandez} -- 65436\\
-    Augusto \textsc{Frate} -- 65013
-\end{flushleft}
-
-\end{multicols}
-
-\vspace{0.5cm}
-
-\renewcommand{\arraystretch}{1.6}
-
-\begin{adjustbox}{max width=\textwidth}
-\begin{tabular}{|p{6cm}|p{7cm}|}
-\hline
-\textbf{Criterio} & \textbf{Calificación} \\ \hline
-Presentación & \\ \hline
-Desarrollo & \\ \hline
-Conclusiones & \\ \hline
-Nota Final & \\ \hline\hline
-Firma y Fecha & \\ \hline
-\end{tabular}
-\end{adjustbox}
-
+    \begin{adjustbox}{max width=\textwidth}
+        \begin{tabular}{|p{6cm}|p{7cm}|}
+            \hline
+            \textbf{Criterio} & \textbf{Calificación} \\ \hline
+            Presentación & \\ \hline
+            Desarrollo & \\ \hline
+            Conclusiones & \\ \hline
+            Nota Final & \\ \hline\hline
+            Firma y Fecha & \\ \hline
+        \end{tabular}
+    \end{adjustbox}
 \end{center}
 
 \thispagestyle{fancy}
@@ -127,140 +112,210 @@ Firma y Fecha & \\ \hline
 \newpage
 \tableofcontents
 \thispagestyle{fancy}
-
 \newpage
 
 % =============================================================================
 % INFORME
-% El cuerpo principal debe ocupar entre 2 y 4 carillas, sin contar carátula,
-% índice, anexo ni bibliografía.
 % =============================================================================
-
-
-
-
-% =============================================================
 \section{Introducción y objetivos}
+
 El electrocardiograma es un estudio no invasivo que registra la actividad eléctrica del corazón en cada latido, ya que, cada vez que el músculo cardíaco se contrae y se relaja para bombear sangre, genera pequeñas corrientes eléctricas que viajan por el cuerpo y pueden medirse colocando electrodos sobre la piel. En un trazado normal se identifican tres componentes principales: la onda P, que refleja la activación eléctrica o despolarización de las aurículas; el complejo QRS, que muestra la activación de los ventrículos y constituye el pico más alto y rápido del registro; y la onda T, que representa la recuperación eléctrica o repolarización ventricular antes de que comience el siguiente ciclo cardíaco. Los equipos biomédicos utilizados para realizar un ECG requieren de un gran procesamiento de la señal para que el resultado sea fehaciente dado que, a partir de estos resultados, se pueden realizar diagnósticos y tomar decisiones sumamente sensibles en un órgano vital para la vida humana.
 
 \vspace{0.3cm}
 
-En está práctica se realizó un circuito en una protoboard para visualizar en un osciloscopio las mediciones de un ECG, observando como modifican a la señal distintos cambios realizados con el fin de mejorar lo observado.
+En esta práctica se realizó un circuito en una protoboard para visualizar en un osciloscopio las mediciones de un ECG, observando cómo modifican a la señal distintos cambios realizados con el fin de mejorar lo observado.
 
 \vspace{0.3cm}
 
-Los objeticos de esta práctica de laboratorio son:
+Los objetivos de esta práctica de laboratorio son:
+
 \begin{itemize}
-    \item Familizarizarse con el formato y funcionamiento de los amplificadores de instrumentación, que se encuentran presentes en un gran número de equipos biomédicos.
-    \item Medir la ganancia en modo diferencial y en modo común para calcular el CMRR realizando una comparación con la hoja de datos y las simulaciones en la plataforma LTSpice
-    \item Implementación en una protoboard un canal básico de ECG, analizando y observando cómo mejorar la señal.
+    \item Familiarizarse con el formato y funcionamiento de los amplificadores de instrumentación, que se encuentran presentes en un gran número de equipos biomédicos.
+    \item Medir la ganancia en modo diferencial y en modo común para calcular el CMRR realizando una comparación con la hoja de datos y las simulaciones en la plataforma LTspice.
+    \item Implementar en una protoboard un canal básico de ECG, analizando y observando cómo mejorar la señal.
 \end{itemize}
 
-
-
-
-
-% ================================================================
+% =============================================================================
 \section{Marco Teórico}
 
 \subsection{Amplificador de instrumentación: AD620}
 
+El AD620 es un amplificador de instrumentación utilizado en etapas de entrada para instrumentación biomédica. Su arquitectura interna está integrada por varios amplificadores operacionales y resistencias de precisión que le proporcionan al circuito exactitud y precisión, que son vitales para esta clase de aparatos.
 
-El AD620 es un amplificador de instrumentación utilizado en etapas de entrada para instrumentación biomédica. Su arquitectura interna está intergrada por varios amplificadores operaciones y resistencias de precisión que le proporcionan al circuito exactitud y precisión, que son vitales para esta clase de aparatos. 
-Entre sus características técnicas más destacadas se encuentra la posibilidad de determinar su ganancia diferencial ($G$) utilizando una única resistencia externa ($R_G$) conectada entre los pines 1 y 8, gobernada por la relación $G = (49,4\text{ k}\Omega / R_G) + 1$. Asimismo, ofrece un factor de rechazo en modo común (CMRR) elevado, lo que permite extraer biopotenciales débiles inmersos en ruido. 
+Entre sus características técnicas más destacadas se encuentra la posibilidad de determinar su ganancia diferencial ($G$) utilizando una única resistencia externa ($R_G$) conectada entre los pines 1 y 8, gobernada por la relación $G = (49{,}4\,\text{k}\Omega / R_G) + 1$. Asimismo, ofrece un factor de rechazo en modo común (CMRR) elevado, lo que permite extraer biopotenciales débiles inmersos en ruido.
+
 Esta cualidad se complementa con una impedancia de entrada extremadamente alta, que reduce al mínimo el efecto de carga frente a las impedancias de contacto de los electrodos, una reducida tensión de offset, corrientes de polarización de entrada bajas, y una alimentación flexible.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{figura_AD620.png}
-    \caption{Diagrama de conexiones del amplificador AD620}
-    \label{fig:curva_operativa}
+    \includegraphics[width=0.95\textwidth,height=0.65\textheight,keepaspectratio]{figura_AD620.png}
+    \caption{Diagrama de conexiones del amplificador AD620.}
+    \label{fig:ad620}
 \end{figure}
-
-
 
 \subsection{TL082}
 
-
-
-El TL082 es un circuito integrado que contiene dos amplificadores operacionales con transistores de efecto de campo (JFET) en su etapa de entrada ampliamente utilizado para filtrado activo y ganancia secundaria. Se destaca por presentar una impedancia de entrada sumamente alta combinada con corrientes de polarización de entrada bajas, lo que minimiza la carga sobre las etapas previas. Es una opción robusta, económica y versátil para implementar filtros
-
+El TL082 es un circuito integrado que contiene dos amplificadores operacionales con transistores de efecto de campo (JFET) en su etapa de entrada ampliamente utilizado para filtrado activo y ganancia secundaria. Se destaca por presentar una impedancia de entrada sumamente alta combinada con corrientes de polarización de entrada bajas, lo que minimiza la carga sobre las etapas previas. Es una opción robusta, económica y versátil para implementar filtros.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{figura_TL082.png}
-    \caption{Diagrama de conexiones del amplificador operacional TL082}
-    \label{fig:curva_operativa}
+    \includegraphics[width=0.95\textwidth,height=0.65\textheight,keepaspectratio]{figura_TL082.png}
+    \caption{Diagrama de conexiones del amplificador operacional TL082.}
+    \label{fig:tl082}
 \end{figure}
-
 
 \subsection{Norma IEC 60601-2-25}
 
-Si bien el objetivo del trabajo práctico es implementar un canal básico de ECG en un protoboard, se debe tener en cuenta algunos factores de la norma IEC 60601-2-25 que regula y restringe la funcionalidad de los ECG.
-Entonces, la norma internacional IEC 60601-2-25 establece los requisitos particulares para la seguridad básica y el funcionamiento esencial de los electrocardiógrafos destinados a diagnóstico clínico. A diferencia de los estándares generales, este documento define los criterios técnicos que garantizan que el trazado obtenido reproduzca fielmente la actividad eléctrica del corazón sin introducir distorsiones que puedan derivar en diagnósticos médicos erróneos. Entre sus lineamientos principales para el diseño del circuito se destacan: una respuesta en frecuencia estandarizada ,entre 0,05 Hz y 150 Hz, para preservar tanto las variaciones lentas del segmento ST como la pendiente rápida del complejo QRS; un elevado rechazo en modo común (CMRR) para eliminar la interferencia de la red eléctrica; la clasificación de las conexiones del paciente como partes aplicadas tipo CF, exigiendo corrientes de fuga mínimas y mecanismos de protección frente a descargas de desfibriladores externos.
+Si bien el objetivo del trabajo práctico es implementar un canal básico de ECG en un protoboard, se deben tener en cuenta algunos factores de la norma IEC 60601-2-25 que regula y restringe la funcionalidad de los ECG.
+
+Entonces, la norma internacional IEC 60601-2-25 establece los requisitos particulares para la seguridad básica y el funcionamiento esencial de los electrocardiógrafos destinados a diagnóstico clínico. A diferencia de los estándares generales, este documento define los criterios técnicos que garantizan que el trazado obtenido reproduzca fielmente la actividad eléctrica del corazón sin introducir distorsiones que puedan derivar en diagnósticos médicos erróneos. Entre sus lineamientos principales para el diseño del circuito se destacan: una respuesta en frecuencia estandarizada, entre 0,05 Hz y 150 Hz, para preservar tanto las variaciones lentas del segmento ST como la pendiente rápida del complejo QRS; un elevado rechazo en modo común (CMRR) para eliminar la interferencia de la red eléctrica; la clasificación de las conexiones del paciente como partes aplicadas tipo CF, exigiendo corrientes de fuga mínimas y mecanismos de protección frente a descargas de desfibriladores externos.
 
 \subsection{Triángulo de Einthoven}
 
-El Triángulo de Einthoven es un modelo geométrico que explica cómo se registra la 
-actividad eléctrica del corazón en el plano frontal del cuerpo humano. Plantea un triángulo imaginario alrededor del corazón cuyos tres vértices corresponden al brazo derecho, al brazo izquierdo y a la pierna izquierda, puntos donde se colocan las pinzas de las extremidades. 
-Al medir la diferencia de potencial eléctrico entre estos pares de electrodos se obtienen las derivaciones bipolares clásicas: la Derivación I mide entre el brazo izquierdo y el derecho, la Derivación II entre la pierna izquierda y el brazo derecho, y la Derivación III entre la pierna izquierda y el brazo izquierdo. 
-. Por su parte, la cuarta pinza, ubicada en la pierna derecha, no forma parte del triángulo y se utiliza únicamente como referencia o masa para cancelar el ruido eléctrico del entorno.
+El Triángulo de Einthoven es un modelo geométrico que explica cómo se registra la actividad eléctrica del corazón en el plano frontal del cuerpo humano. Plantea un triángulo imaginario alrededor del corazón cuyos tres vértices corresponden al brazo derecho, al brazo izquierdo y a la pierna izquierda, puntos donde se colocan las pinzas de las extremidades.
+
+Al medir la diferencia de potencial eléctrico entre estos pares de electrodos se obtienen las derivaciones bipolares clásicas: la Derivación I mide entre el brazo izquierdo y el derecho, la Derivación II entre la pierna izquierda y el brazo derecho, y la Derivación III entre la pierna izquierda y el brazo izquierdo.
+
+Por su parte, la cuarta pinza, ubicada en la pierna derecha, no forma parte del triángulo y se utiliza únicamente como referencia o masa para cancelar el ruido eléctrico del entorno.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{pinzas.png}
-    \caption{Conexión de las pinzas}
-    \label{fig:curva_operativa}
+    \includegraphics[width=0.95\textwidth,height=0.65\textheight,keepaspectratio]{pinzas.png}
+    \caption{Conexión de las pinzas.}
+    \label{fig:pinzas}
 \end{figure}
-% ================================================================
+
+% =============================================================================
 \section{Práctica}
 
 \subsection{Laboratorio}
+
 En esta práctica se busca realizar el conexionado del siguiente circuito en una protoboard. En nuestro caso la obtención de la señal se dio a partir de las pinzas de ECG que son los transductores reutilizables encargados de captar la señal eléctrica en las muñecas y tobillos del paciente para registrar las derivaciones del plano frontal.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{circuito.png}
-    \caption{Diagrama del circuito a estudiar}
-    \label{fig:curva_operativa}
+    \includegraphics[width=0.95\textwidth,height=0.65\textheight,keepaspectratio]{circuito.png}
+    \caption{Diagrama del circuito a estudiar.}
+    \label{fig:circuito_tp}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{esquema.png}
-    \caption{Esquema del circuito a estudiar}
-    \label{fig:curva_operativa}
+    \includegraphics[width=0.95\textwidth,height=0.65\textheight,keepaspectratio]{esquema.png}
+    \caption{Esquema del circuito a estudiar.}
+    \label{fig:esquema_tp}
 \end{figure}
 
+\subsection{Simulación}
+\label{sec:simulacion_ecg}
 
+\subsubsection{Circuito original y señales de entrada}
 
+Se implementó en LTspice el circuito propuesto en el trabajo práctico para estudiar su respuesta y evaluar modificaciones en la alimentación, la ganancia y el filtrado. Se utilizaron los modelos del AD620 y del TL072.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth,height=0.65\textheight,keepaspectratio]{CircuitoECG.png}
+    \caption{Implementación del circuito de ECG en LTspice.}
+    \label{fig:circuito_ecg_simulado}
+\end{figure}
 
+La señal de ECG se generó mediante una fuente de tensión diferencial definida por tramos lineales (PWL), con ondas P, QRS y T. Se utilizó un período de \SI{1}{\second}, equivalente a 60 latidos por minuto, con un máximo de \SI{1}{\milli\volt} y un mínimo de \SI{-0.25}{\milli\volt}. Esta forma de onda constituye una aproximación sintética para comparar las configuraciones, no un registro adquirido de un paciente.
 
-\subsection{Simulacion}
+El ruido se representó con un generador sinusoidal de \SI{50}{\hertz} y \SI{1}{\volt} de amplitud pico, aplicado en modo común a ambas entradas mediante dos resistencias iguales de \SI{1}{\kilo\ohm}. Así, el ruido se superpone a la tensión de referencia y representa el acoplamiento de la red eléctrica. Su amplitud corresponde al modo común, no a la diferencia de potencial del ECG. Ambas fuentes se mantuvieron iguales al comparar el circuito original y el modificado.
 
+\subsubsection{Función de las etapas y configuración original}
 
+El divisor formado por dos resistencias de \SI{10}{\kilo\ohm} genera la mitad de la alimentación. Un operacional conectado como seguidor proporciona una referencia de baja impedancia para el terminal REF del AD620 y la entrada no inversora de la etapa final. Con una alimentación simple de \SI{5}{\volt}, esta referencia es de \SI{2.5}{\volt} y permite representar variaciones positivas y negativas del ECG alrededor de ese nivel.
 
-% ================================================================
+El AD620 amplifica la diferencia entre las entradas y rechaza la componente común. En la implementación inicial se utilizó $R_G=\SI{200}{\kilo\ohm}$, por lo que su ganancia nominal fue:
+
+\begin{equation} G_{\mathrm{AD},0}=1+\frac{\SI{49.4}{\kilo\ohm}}{\SI{200}{\kilo\ohm}}=1{,}247. \end{equation}
+
+La etapa final es un amplificador inversor con filtrado pasabanda. El capacitor de acoplamiento $C_1$ y la resistencia de entrada $R_3=\SI{4.7}{\kilo\ohm}$ forman el pasaaltos, que bloquea la componente continua procedente de la etapa anterior. Las dos resistencias de realimentación de \SI{39}{\kilo\ohm} suman $R_F=\SI{78}{\kilo\ohm}$; junto con $C_2$, conectado en paralelo con esa realimentación, forman el pasabajos. Considerando operacionales ideales y una referencia estable, las frecuencias de corte son:
+
+\begin{equation} f_L=\frac{1}{2\pi R_3 C_1}, \qquad f_H=\frac{1}{2\pi R_F C_2}. \end{equation}
+
+Con $C_1=\SI{10}{\micro\farad}$ y $C_2=\SI{47}{\nano\farad}$ se obtiene $f_{L,0}\approx\SI{3.39}{\hertz}$ y $f_{H,0}\approx\SI{43.4}{\hertz}$. El corte inferior atenúa componentes lentas del ECG. El pasabajos ya limita las componentes de alta frecuencia, pero su atenuación a \SI{50}{\hertz} es moderada, aproximadamente \SI{3.7}{\decibel} respecto de su ganancia de baja frecuencia, por tratarse de un filtro de primer orden. Por lo tanto, puede persistir interferencia residual aun con este corte superior.
+
+\subsubsection{Modificaciones y justificación}
+
+\paragraph{Alimentación.}
+
+Se aumentó la alimentación simple de \SI{5}{\volt} a \SI{12}{\volt}. Al conservar el divisor, la referencia pasó de \SI{2.5}{\volt} a \SI{6}{\volt}. Con el mismo ruido, el modo común de entrada pasó de oscilar aproximadamente entre \SI{1.5}{\volt} y \SI{3.5}{\volt} a hacerlo entre \SI{5}{\volt} y \SI{7}{\volt}. Esto aumenta el margen respecto de los rieles y favorece el funcionamiento lineal del AD620 y de los operacionales. El TL072 convencional empleado no es de entrada y salida rail-to-rail, por lo que una referencia a mitad de \SI{5}{\volt} no garantiza una polarización adecuada \cite{ti_tl072}. El cambio de nivel continuo de la salida es consecuencia de la nueva referencia.
+
+\paragraph{Ganancia.}
+
+Se redujo $R_G$ de \SI{200}{\kilo\ohm} a \SI{10}{\kilo\ohm}, obteniéndose:
+
+\begin{equation} G_{\mathrm{AD},1}=1+\frac{49{,}4}{10}=5{,}94. \end{equation}
+
+La ganancia nominal aumenta unas \num{4.76} veces, lo que permite visualizar mejor las variaciones pequeñas. Una componente de entrada de \SI{1}{\milli\volt} en la banda de paso produce una variación de salida del orden de \SI{0.1}{\volt}, con margen respecto de la alimentación.
+
+Esta elección es compatible con la banda de frecuencias que se desea conservar. La hoja de datos especifica anchos de banda diferenciales típicos de \SI{1}{\mega\hertz} para $G=1$ y \SI{800}{\kilo\hertz} para $G=10$, ambos muy superiores a las decenas de hertz del filtrado seleccionado \cite{adi_ad620}. Estos datos permiten justificar que el AD620 no determina el corte superior del canal para las ganancias utilizadas, sin asignar un valor exacto de ancho de banda a $G=1{,}247$ o $G=5{,}94$.
+
+\paragraph{Filtrado.}
+
+Se aumentó $C_1$ de \SI{10}{\micro\farad} a \SI{68}{\micro\farad}, desplazando el corte inferior de \SI{3.39}{\hertz} a:
+
+\begin{equation} f_{L,1}=\frac{1}{2\pi\,(4{,}7\times10^3)\,(68\times10^{-6})}\approx\SI{0.498}{\hertz}. \end{equation}
+
+Este valor reduce la atenuación de las componentes lentas asociadas a las ondas P y T, manteniendo el bloqueo de continua.
+
+Se aumentó $C_2$ de \SI{47}{\nano\farad} a \SI{56}{\nano\farad}. Con $R_F=\SI{78}{\kilo\ohm}$, el corte superior final resulta:
+
+\begin{equation} f_{H,1}=\frac{1}{2\pi\,(78\times10^3)\,(56\times10^{-9})}\approx\SI{36.4}{\hertz}. \end{equation}
+
+La banda aproximada pasó de \SI{3.39}{\hertz}--\SI{43.4}{\hertz} a \SI{0.498}{\hertz}--\SI{36.4}{\hertz}. El aumento de $C_1$ extiende la respuesta hacia las componentes lentas del ECG; el aumento de $C_2$ incrementa la atenuación a \SI{50}{\hertz}. A cambio, también se atenúan algo más las componentes rápidas del QRS.
+
+% =============================================================================
 \section{Resultados}
 
+\subsection{Resultado de la configuración original}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth,height=0.65\textheight,keepaspectratio]{ECG_original.png}
+    \caption{Salida de la configuración original con interferencia común de \SI{1}{\volt} pico a \SI{50}{\hertz}.}
+    \label{fig:ecg_original}
+\end{figure}
 
+En el resultado original se reconoce la repetición de los complejos QRS, pero aparece un seno superpuesto que dificulta observar las ondas de menor amplitud. La señal se encuentra centrada alrededor de \SI{2.5}{\volt}. La baja ganancia inicial, la atenuación de componentes lentas por el pasaaltos y el escaso margen de funcionamiento con alimentación de \SI{5}{\volt} motivaron las modificaciones descritas en la sección de simulación.
 
-% =================================================================
+\subsection{Resultado con las modificaciones}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth,height=0.65\textheight,keepaspectratio]{ECG_cambios.png}
+    \caption{Salida con alimentación de \SI{12}{\volt}, $R_G=\SI{10}{\kilo\ohm}$, $C_1=\SI{68}{\micro\farad}$ y $C_2=\SI{56}{\nano\farad}$, manteniendo las fuentes de ECG e interferencia.}
+    \label{fig:ecg_modificado}
+\end{figure}
+
+La señal modificada presenta una mayor amplitud y permite distinguir mejor las ondas P, QRS y T, con un ruido menos prominente respecto del ECG. La línea de base se sitúa alrededor de \SI{6}{\volt} y se conserva la inversión introducida por la etapa final. La mejora se interpreta como una mayor ganancia diferencial y una menor atenuación de las componentes lentas del ECG por el nuevo pasaaltos y un corte superior más bajo. El nuevo valor de $C_2$ aporta una mayor atenuación de la interferencia de red.
+
+% =============================================================================
 \section{Conclusiones}
 
-
-
-
-
-% =================================================================
+% =============================================================================
 \section{Bibliografía}
 
-Hojas de datos.
-% chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://webstore.iec.ch/en/iec_catalog/product/preview/?id=L3B1Yi9wZGYvcHJldmlldy9pbmZvX2llYzYwNjAxLTItMjV7ZWQyLjB9Yi5wZGY= (norma)
+\begingroup
+\renewcommand{\section}[2]{}
+\begin{thebibliography}{9}
 
+    \bibitem{adi_ad620}
+    Analog Devices.
+    \textit{AD620: Low Cost, Low Power Instrumentation Amplifier}.
+    Rev. H. Disponible en:
+    \url{https://www.analog.com/media/en/technical-documentation/data-sheets/ad620.pdf}.
 
+    \bibitem{ti_tl072}
+    Texas Instruments.
+    \textit{TL07xx Low-Noise, FET-Input Operational Amplifiers}.
+    Disponible en:
+    \url{https://www.ti.com/lit/ds/symlink/tl072.pdf}.
 
+\end{thebibliography}
+\endgroup
 
 \end{document}

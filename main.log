@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.8)  19 SEP 2026 20:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.8)  27 SEP 2026 17:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Joaquin Basualdo/Desktop/ITBA/4to 1er cuatri/Instru 1/TP3/main.tex"
-(c:/Users/Joaquin Basualdo/Desktop/ITBA/4to 1er cuatri/Instru 1/TP3/main.tex
+**c:/Users/facun/OneDrive/Documentos/GitHub/TP3_G5_InstrumentacionBiomedica1/main.tex
+(c:/Users/facun/OneDrive/Documentos/GitHub/TP3_G5_InstrumentacionBiomedica1/main.tex
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
 (c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -56,8 +56,8 @@ Package babel Info: Making . an active character on input line 675.
 Package babel Info: Making < an active character on input line 722.
 Package babel Info: Making > an active character on input line 722.
 ))
-LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 30.
-LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 30.
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 28.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 28.
  (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2026/05/19 v2.18d AMS math features
 \@mathmargin=\skip51
@@ -498,46 +498,33 @@ LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported on input line 12.
-
-
-LaTeX Warning: Label `fig:curva_operativa' multiply defined.
-
-
-LaTeX Warning: Label `fig:curva_operativa' multiply defined.
-
-
-LaTeX Warning: Label `fig:curva_operativa' multiply defined.
-
-
-LaTeX Warning: Label `fig:curva_operativa' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Info: Redefining \. on input line 66.
-LaTeX Info: Redefining \% on input line 66.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Info: Redefining \. on input line 59.
+LaTeX Info: Redefining \% on input line 59.
  (c:/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-dictionary-spanish.trsl
 File: translations-basic-dictionary-spanish.trsl (spanish translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 66.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 59.
  (c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count350
@@ -560,17 +547,17 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 66.
+Package hyperref Info: Link coloring OFF on input line 59.
  (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
 Package babel Info: Main language set to 'spanish'.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 109.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
  (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 109.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
  (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -583,45 +570,53 @@ LaTeX Info: Redefining \% on input line 1.
 \openout4 = `main.toc'.
 
  [2]
-<imagenes/figura_AD620.png, id=83, 399.74344pt x 264.23718pt>
-File: imagenes/figura_AD620.png Graphic file (type png)
-<use imagenes/figura_AD620.png>
-Package pdftex.def Info: imagenes/figura_AD620.png  used on input line 175.
-(pdftex.def)             Requested size: 405.45045pt x 268.0225pt.
+<Imagenes/figura_AD620.png, id=108, 399.74344pt x 264.23718pt>
+File: Imagenes/figura_AD620.png Graphic file (type png)
+<use Imagenes/figura_AD620.png>
+Package pdftex.def Info: Imagenes/figura_AD620.png  used on input line 151.
+(pdftex.def)             Requested size: 405.46996pt x 268.0225pt.
  [3]
-<imagenes/figura_TL082.png, id=92, 501.875pt x 335.2525pt>
-File: imagenes/figura_TL082.png Graphic file (type png)
-<use imagenes/figura_TL082.png>
-Package pdftex.def Info: imagenes/figura_TL082.png  used on input line 191.
-(pdftex.def)             Requested size: 405.45045pt x 270.8522pt.
+<Imagenes/figura_TL082.png, id=117, 501.875pt x 335.2525pt>
+File: Imagenes/figura_TL082.png Graphic file (type png)
+<use Imagenes/figura_TL082.png>
+Package pdftex.def Info: Imagenes/figura_TL082.png  used on input line 162.
+(pdftex.def)             Requested size: 405.46738pt x 270.8522pt.
  [4 <./Imagenes/figura_AD620.png>] [5 <./Imagenes/figura_TL082.png (PNG copy)>]
-<imagenes/pinzas.png, id=104, 150.5625pt x 225.84375pt>
-File: imagenes/pinzas.png Graphic file (type png)
-<use imagenes/pinzas.png>
-Package pdftex.def Info: imagenes/pinzas.png  used on input line 211.
-(pdftex.def)             Requested size: 405.45045pt x 608.29753pt.
- [6]
-Overfull \vbox (32.78966pt too high) has occurred while \output is active []
-
- [7 <./Imagenes/pinzas.png (PNG copy)>]
-<imagenes/circuito.png, id=115, 313.9228pt x 456.20438pt>
-File: imagenes/circuito.png Graphic file (type png)
-<use imagenes/circuito.png>
-Package pdftex.def Info: imagenes/circuito.png  used on input line 223.
-(pdftex.def)             Requested size: 405.45045pt x 589.24396pt.
- [8]
-Overfull \vbox (13.73608pt too high) has occurred while \output is active []
-
- [9 <./Imagenes/circuito.png>]
-<imagenes/esquema.png, id=126, 255.95625pt x 410.2828pt>
-File: imagenes/esquema.png Graphic file (type png)
-<use imagenes/esquema.png>
-Package pdftex.def Info: imagenes/esquema.png  used on input line 230.
-(pdftex.def)             Requested size: 405.45045pt x 649.95508pt.
-
-Overfull \vbox (74.4472pt too high) has occurred while \output is active []
-
- [10 <./Imagenes/esquema.png>] [11] (./main.aux
+<Imagenes/pinzas.png, id=129, 150.5625pt x 225.84375pt>
+File: Imagenes/pinzas.png Graphic file (type png)
+<use Imagenes/pinzas.png>
+Package pdftex.def Info: Imagenes/pinzas.png  used on input line 183.
+(pdftex.def)             Requested size: 258.95094pt x 388.42642pt.
+<Imagenes/circuito.png, id=130, 313.9228pt x 456.20438pt>
+File: Imagenes/circuito.png Graphic file (type png)
+<use Imagenes/circuito.png>
+Package pdftex.def Info: Imagenes/circuito.png  used on input line 197.
+(pdftex.def)             Requested size: 267.25716pt x 388.3881pt.
+ [6 <./Imagenes/pinzas.png (PNG copy)>]
+<Imagenes/esquema.png, id=136, 255.95625pt x 410.2828pt>
+File: Imagenes/esquema.png Graphic file (type png)
+<use Imagenes/esquema.png>
+Package pdftex.def Info: Imagenes/esquema.png  used on input line 204.
+(pdftex.def)             Requested size: 242.29001pt x 388.37663pt.
+ [7 <./Imagenes/circuito.png>]
+<Imagenes/CircuitoECG.png, id=144, 548.54938pt x 309.155pt>
+File: Imagenes/CircuitoECG.png Graphic file (type png)
+<use Imagenes/CircuitoECG.png>
+Package pdftex.def Info: Imagenes/CircuitoECG.png  used on input line 218.
+(pdftex.def)             Requested size: 405.45982pt x 228.51166pt.
+ [8 <./Imagenes/esquema.png>] [9 <./Imagenes/CircuitoECG.png>]
+<Imagenes/ECG_original.png, id=162, 949.04562pt x 169.13188pt>
+File: Imagenes/ECG_original.png Graphic file (type png)
+<use Imagenes/ECG_original.png>
+Package pdftex.def Info: Imagenes/ECG_original.png  used on input line 278.
+(pdftex.def)             Requested size: 405.44608pt x 72.25558pt.
+ [10{c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<Imagenes/ECG_cambios.png, id=179, 948.54375pt x 170.6375pt>
+File: Imagenes/ECG_cambios.png Graphic file (type png)
+<use Imagenes/ECG_cambios.png>
+Package pdftex.def Info: Imagenes/ECG_cambios.png  used on input line 289.
+(pdftex.def)             Requested size: 405.44878pt x 72.93787pt.
+ [11 <./Imagenes/ECG_original.png> <./Imagenes/ECG_cambios.png>] (./main.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -629,26 +624,22 @@ LaTeX Info: Redefining \% on input line 12.
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E9EE935EC998C640B850A94B7922E550;1576.
+(rerunfilecheck)             Checksum: C1A6C37570070770DFF1DC3029BD250E;2894.
  ) 
 Here is how much of TeX's memory you used:
- 19279 strings out of 467099
- 373472 string characters out of 5412503
- 771805 words of memory out of 5000000
- 48374 multiletter control sequences out of 15000+600000
- 639824 words of font info for 62 fonts, out of 8000000 for 9000
+ 19361 strings out of 467099
+ 375106 string characters out of 5412503
+ 777519 words of memory out of 5000000
+ 48432 multiletter control sequences out of 15000+600000
+ 641836 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,11n,80p,1121b,1057s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (11 pages, 485310 bytes).
+ 74i,12n,80p,1127b,1082s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on main.pdf (11 pages, 624720 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 122 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 282 PDF objects out of 1000 (max. 8388607)
+ 217 compressed objects within 3 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 
