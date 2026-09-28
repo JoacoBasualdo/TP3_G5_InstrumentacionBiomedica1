@@ -7,8 +7,8 @@
 \contentsline {subsection}{\numberline {2.4}Triángulo de Einthoven}{5}{subsection.2.4}%
 \contentsline {section}{\numberline {3}Práctica}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Laboratorio}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Simulación}{8}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Circuito original y señales de entrada}{8}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2}Simulación}{9}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Circuito original y señales de entrada}{9}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Función de las etapas y configuración original}{9}{subsubsection.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.2.3}Modificaciones y justificación}{10}{subsubsection.3.2.3}%
 \contentsline {paragraph}{Alimentación.}{10}{section*.8}%
